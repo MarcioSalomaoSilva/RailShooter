@@ -1,0 +1,18 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Level_Manager.cs">
+    <Files>
+      <File FileName="Assets\Level_Manager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Rail Scripts\Level Scripts\Training Level Scripts\Level_Spawner.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Rail Scripts\Asteroid Scripts\Asteroid_Controller.cs" Line="1" Column="1" />
+      <File FileName="Assets\collisiontest.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Rail Scripts\Player Scripts\Weapon Scripts\Weapon_Controller.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Rail Scripts\Player Scripts\Player_Controller.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Rail Scripts\Camera Scripts\Camera_Controller.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

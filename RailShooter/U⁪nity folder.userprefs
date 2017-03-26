@@ -1,0 +1,23 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Main\Player Scripts\Weapon Scripts\Weapon_Controller.cs">
+    <Files>
+      <File FileName="Assets\Scripts\Main\Player Scripts\Weapon Scripts\Weapon_Controller.cs" Line="126" Column="1" />
+      <File FileName="Assets\Scripts\Main\Pathfinding Scripts\AI_Node.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Main\Player Scripts\Player_Manager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Main\Player Scripts\Player_Motor.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Main\Player Scripts\Camera Scripts\UICamera_Controller.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Main\Player Scripts\Camera Scripts\Camera_Controller.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Main\Player Scripts\Player_Input.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Main\Pathfinding Scripts\AI_Pathfinding.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Main\Pathfinding Scripts\AI_Grid.cs" Line="55" Column="47" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="C:\Users\oathb\Google Drive\Game-Idea\U⁪nity folder\Assets\Scripts\Main\Player Scripts\Camera Scripts\UICamera_Controller.cs" line="91" column="1" />
+      <Breakpoint file="C:\Users\oathb\Google Drive\Game-Idea\U⁪nity folder\Assets\Scripts\Main\Player Scripts\Camera Scripts\Camera_Controller.cs" line="59" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
