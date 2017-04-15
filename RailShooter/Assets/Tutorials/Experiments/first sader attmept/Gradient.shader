@@ -1,4 +1,6 @@
-﻿Shader "Unlit/Gradient"
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Unlit/Gradient"
 {
 	Properties
 	{
@@ -55,7 +57,7 @@
 			{
 				v2f output;
 				//
-				output.position = mul(UNITY_MATRIX_MVP, input.position);
+				output.position = UnityObjectToClipPos(input.position);
 				output.uv = input.uv;
 				//
 				float3 normal = UnityObjectToWorldNormal(input.normal);

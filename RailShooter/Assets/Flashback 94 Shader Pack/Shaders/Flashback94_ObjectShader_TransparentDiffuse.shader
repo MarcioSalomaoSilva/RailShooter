@@ -1,4 +1,6 @@
-﻿
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+
 //////////////////////////////////////////////////////////////////////////////////////////
 //																						//
 // Flashback '94 Shader Pack for Unity 3D												//
@@ -54,7 +56,7 @@ Shader "Flashback 94/Object Shader/Transparent Diffuse" {
 			    
 			    // Snap vertex to position based on snapping amount
 			    half snapValue = _Snapping / 1000;
-			    float4 realpos = mul (UNITY_MATRIX_MVP, v.vertex);
+			    float4 realpos = UnityObjectToClipPos (v.vertex);
 			    float4 steps = floor((realpos / snapValue) + 0.5);
 			    o.pos = steps * snapValue;
 			    
@@ -121,7 +123,7 @@ Shader "Flashback 94/Object Shader/Transparent Diffuse" {
 			    
 			    // Snap vertex to position based on snapping amount
 			    half snapValue = _Snapping / 1000;
-			    float4 realpos = mul (UNITY_MATRIX_MVP, v.vertex);
+			    float4 realpos = UnityObjectToClipPos (v.vertex);
 			    float4 steps = floor((realpos / snapValue) + 0.5);
 			    o.pos = steps * snapValue;
 	 
@@ -164,7 +166,7 @@ Shader "Flashback 94/Object Shader/Transparent Diffuse" {
 			    
 			    // Snap vertex to position based on snapping amount
 			    half snapValue = _Snapping / 1000;
-			    float4 realpos = mul (UNITY_MATRIX_MVP, v.vertex);
+			    float4 realpos = UnityObjectToClipPos (v.vertex);
 			    float4 steps = floor((realpos / snapValue) + 0.5);
 			    o.pos = steps * snapValue;
 	 

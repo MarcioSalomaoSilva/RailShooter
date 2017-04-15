@@ -1,4 +1,6 @@
-﻿// Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+// Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
 // Upgrade NOTE: replaced '_World2Object' with 'unity_WorldToObject'
 
 
@@ -67,7 +69,7 @@ Shader "Flashback 94/Object Shader/Cubemap Specular" {
 			    
 			    // Snap vertex to position based on snapping amount
 			    half snapValue = _Snapping / 1000;
-			    float4 realpos = mul (UNITY_MATRIX_MVP, v.vertex);
+			    float4 realpos = UnityObjectToClipPos (v.vertex);
 			    float4 steps = floor((realpos / snapValue) + 0.5);
 			    o.pos = steps * snapValue;
 			    
@@ -148,7 +150,7 @@ Shader "Flashback 94/Object Shader/Cubemap Specular" {
 			    
 			    // Snap vertex to position based on snapping amount
 			    half snapValue = _Snapping / 1000;
-			    float4 realpos = mul (UNITY_MATRIX_MVP, v.vertex);
+			    float4 realpos = UnityObjectToClipPos (v.vertex);
 			    float4 steps = floor((realpos / snapValue) + 0.5);
 			    o.pos = steps * snapValue;
 	 
@@ -191,7 +193,7 @@ Shader "Flashback 94/Object Shader/Cubemap Specular" {
 			    
 			    // Snap vertex to position based on snapping amount
 			    half snapValue = _Snapping / 1000;
-			    float4 realpos = mul (UNITY_MATRIX_MVP, v.vertex);
+			    float4 realpos = UnityObjectToClipPos (v.vertex);
 			    float4 steps = floor((realpos / snapValue) + 0.5);
 			    o.pos = steps * snapValue;
 	 
