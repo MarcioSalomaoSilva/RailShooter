@@ -27,8 +27,6 @@ Shader "Custom/Experiments/Terrain" {
 		_TopColor4("Opaque Color", Color) = (1,1,1,1)
 		_BottomColor4("Transparent Color", Color) = (1,1,1,1)
 		[NoScaleOffset] _Texture4("Albedo 4", 2D) = "white" {}
-		//
-		[NoScaleOffset] _NoiseTex("Noise Texture (For Blending)", 2D) = "white" {}
 	}
 		SubShader{
 			Pass {

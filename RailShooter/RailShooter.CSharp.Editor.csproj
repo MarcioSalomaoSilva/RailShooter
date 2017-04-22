@@ -114,13 +114,25 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="RailShooter.CSharp.Plugins.csproj">
+      <Project>{07AE5ED5-5A72-D3B3-C5C7-140F33448808}</Project>
+      <Name>RailShooter.CSharp.Plugins</Name>
+    </ProjectReference>
     <ProjectReference Include="RailShooter.CSharp.csproj">
       <Project>{4B8E4C19-4AFB-01AA-C97A-3D500AACA12C}</Project>
       <Name>RailShooter.CSharp</Name>
     </ProjectReference>
+    <ProjectReference Include="RailShooter.CSharp.Editor.Plugins.csproj">
+      <Project>{A79D0FE7-CBFA-724F-D7E4-8399BE7CC696}</Project>
+      <Name>RailShooter.CSharp.Editor.Plugins</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Flashback 94 Shader Pack\Editor\Flashback94_PostProcess_Editor.cs" />
+    <Compile Include="Assets\Kino\Obscurance\Editor\ObscuranceEditor.cs" />
+    <Compile Include="Assets\Skybox Shaders\Editor\GradientSkyboxInspector.cs" />
+    <Compile Include="Assets\Skybox Shaders\Editor\HorizonWithSunSkyboxInspector.cs" />
+    <Compile Include="Assets\Skybox Shaders\Editor\RgbmCubedSkyboxInspector.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Flashback 94 Shader Pack\ReadMe.txt" />
@@ -139,22 +151,111 @@
     <None Include="Assets\Flashback 94 Shader Pack\Shaders\Flashback94_ObjectShader_TransparentDiffuse.shader" />
     <None Include="Assets\Flashback 94 Shader Pack\Shaders\Flashback94_ObjectShader_TransparentSpecular.shader" />
     <None Include="Assets\Flashback 94 Shader Pack\Shaders\Flashback94_ObjectShader_TransparentUnlit.shader" />
+    <None Include="Assets\Gre-Sketch-master\Shaders\Dithering\GreEdgeDetection.shader" />
+    <None Include="Assets\Gre-Sketch-master\Shaders\Dithering\GreEdgeDetectionHelper.shader" />
+    <None Include="Assets\Gre-Sketch-master\Shaders\EdgeDetection\GreWernessDitherFinalPassShader.shader" />
+    <None Include="Assets\Gre-Sketch-master\Shaders\EdgeDetection\GreWernessDitherInitialPassShader.shader" />
+    <None Include="Assets\Gre-Sketch-master\Shaders\EdgeDetection\GreWernessDitherShader.shader" />
+    <None Include="Assets\Kino\Obscurance\Shader\Common.cginc" />
+    <None Include="Assets\Kino\Obscurance\Shader\Composition.cginc" />
+    <None Include="Assets\Kino\Obscurance\Shader\Obscurance.cginc" />
+    <None Include="Assets\Kino\Obscurance\Shader\Obscurance.shader" />
+    <None Include="Assets\Kino\Obscurance\Shader\SeparableBlur.cginc" />
     <None Include="Assets\Scripts\ColorShaders\UnlitHShadowsTextureColor.shader" />
     <None Include="Assets\Scripts\ColorShaders\UnlitTextureColor.shader" />
     <None Include="Assets\Scripts\ColorShaders\UnlitTransparentTextureColor.shader" />
     <None Include="Assets\Scripts\ColorShaders\colouroutlineshader.shader" />
+    <None Include="Assets\Skybox Shaders\Gradient Skybox.shader" />
+    <None Include="Assets\Skybox Shaders\Horizon With Sun Skybox.shader" />
+    <None Include="Assets\Skybox Shaders\Horizontal Skybox.shader" />
+    <None Include="Assets\Skybox Shaders\RGBM Cubed Skybox.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\BlendModesOverlay.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\BlurEffectConeTaps.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\CameraMotionBlur.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\CameraMotionBlurDX11.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ChromaticAberrationShader.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrection3DLut.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrectionCurves.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrectionCurvesSimple.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrectionEffect.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrectionSelective.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\Adaptation.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\Apply.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\Luminance.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\MinMaxReduction.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ContrastComposite.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ConvertDepth.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\CreaseApply.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\EdgeDetectNormals.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\FisheyeShader.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\GlobalFog.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\GrayscaleEffect.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\MotionBlur.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\MotionBlurClear.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseAndGrain.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseAndGrainDX11.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseEffectShaderRGB.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseEffectShaderYUV.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\PrepareSunShaftsBlur.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\RadialBlur.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\SSAOShader.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ScreenSpaceAmbientObscurance.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ScreenSpaceRaytrace.cginc" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\SepiaToneEffect.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ShowAlphaChannel.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\SimpleClear.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\SunShaftsComposite.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\Tonemapper.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\TwirlEffect.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\VignettingShader.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\VortexEffect.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\DLAA.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAA2.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAA3Console.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAAPreset2.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAAPreset3.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\NFAA.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\SSAA.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\Blend.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendForBloom.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlurAndFlares.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BrightPassFilter.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BrightPassFilter2.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\LensFlareCreate.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\MobileBloom.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\MobileBlur.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\MultiPassHollywoodFlares.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\SeparableBlurPlus.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\VignetteShader.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\Bokeh34.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\DepthOfField34.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\DepthOfFieldDX11.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\DepthOfFieldScatter.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\SeparableBlur.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\SeparableWeightedBlurDof34.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\TiltShiftHdrLensBlur.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\frag_ao.cginc" />
     <None Include="Assets\Tutorials\1. Textured\Textured.shader" />
     <None Include="Assets\Tutorials\2. Textured with Detail\Detail Texure fadein didnt work.txt" />
     <None Include="Assets\Tutorials\2. Textured with Detail\SplatMap.shader" />
     <None Include="Assets\Tutorials\2. Textured with Detail\Textured&amp;Detail.shader" />
     <None Include="Assets\Tutorials\3. Lighting\Lighting&amp;PBS.shader" />
+    <None Include="Assets\Tutorials\3. Lighting\Lighting&amp;Specular Copy.shader" />
     <None Include="Assets\Tutorials\3. Lighting\Lighting&amp;Specular.shader" />
     <None Include="Assets\Tutorials\3. Lighting\Lighting.shader" />
     <None Include="Assets\Tutorials\3. Lighting\Normals.shader" />
     <None Include="Assets\Tutorials\Experiments\T1\Experiments.shader" />
     <None Include="Assets\Tutorials\Experiments\T2\ExperimentsTerrain.shader" />
     <None Include="Assets\Tutorials\Experiments\T3\ExperimentPBS.shader" />
+    <None Include="Assets\Tutorials\Experiments\TheShader\LightingAlbedoPass.cginc" />
+    <None Include="Assets\Tutorials\Experiments\TheShader\LightingRampPass.cginc" />
+    <None Include="Assets\Tutorials\Experiments\TheShader\TheShader.shader" />
     <None Include="Assets\Tutorials\Experiments\first sader attmept\Gradient.shader" />
+    <None Include="Assets\Tutorials\Image effects\BlendMode_ImageEffect.shader" />
+    <None Include="Assets\Tutorials\Image effects\ImageEffect.shader" />
+    <None Include="Assets\Tutorials\Image effects\Overlay_ImageEffect.shader" />
+    <None Include="Assets\Tutorials\Image effects\Standard.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>
